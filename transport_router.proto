@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package proto_tr_router;
+
+message Stop
+{
+    string name = 1;
+    int32 id = 2;
+}
+
+message Bus
+{
+    string name = 1;
+    int32 id = 2;
+}
+
+message EdgeInfo
+{
+    int32 bus = 1;
+    int32 span_count = 2;
+    double time = 3;
+    int32 stop_from = 4;
+    int32 stop_to = 5;
+}
+
+message TransportRouter
+{
+    repeated Stop stops = 1;
+    repeated Bus buses = 2;
+    double bus_wait_time = 3;
+    repeated EdgeInfo edges_info = 4;
+}

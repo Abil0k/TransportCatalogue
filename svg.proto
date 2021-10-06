@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package proto_svg;
+
+message Color
+{
+    string type = 1;
+    string color = 2;
+    int32 red = 3;
+    int32 green = 4;
+    int32 blue = 5;
+    double opacity = 6;
+}
